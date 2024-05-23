@@ -61,14 +61,14 @@ public class TranslatorService {
             Translator translator
     ) {
         Translator translatorData = translatorRepository.findById(translatorId).orElseThrow(() -> new IllegalStateException("Author with id " + translatorId + " does not exist!"));
-        if (translatorData.getFirstName() != null && translatorData.getFirstName().isEmpty() && !Objects.equals(translatorData.getFirstName(), translator.getFirstName())) {
+        if (translatorData.getFirstName() != null && !translatorData.getFirstName().isEmpty() && !Objects.equals(translatorData.getFirstName(), translator.getFirstName())) {
             translatorData.setFirstName(translator.getFirstName());
         }
         if (translatorData.getLastName() != null && !translatorData.getLastName().isEmpty() && !Objects.equals(translatorData.getLastName(), translator.getLastName())) {
             translatorData.setLastName(translator.getLastName());
         }
         if (translatorData.getLanguageRelease() != null && !translatorData.getLanguageRelease().isEmpty() && !Objects.equals(translatorData.getLanguageRelease(), translator.getLanguageRelease())) {
-            translatorData.setLastName(translator.getLanguageRelease());
+            translatorData.setLanguageRelease(translator.getLanguageRelease());
         }
         translatorRepository.save(translatorData);
     }

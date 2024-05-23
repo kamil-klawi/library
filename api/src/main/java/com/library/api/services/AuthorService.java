@@ -59,7 +59,7 @@ public class AuthorService {
             Author author
     ) {
         Author authorData = authorRepository.findById(authorId).orElseThrow(() -> new IllegalStateException("Author with id " + authorId + " does not exist!"));
-        if (authorData.getFirstName() != null && authorData.getFirstName().isEmpty() && !Objects.equals(authorData.getFirstName(), author.getFirstName())) {
+        if (authorData.getFirstName() != null && !authorData.getFirstName().isEmpty() && !Objects.equals(authorData.getFirstName(), author.getFirstName())) {
             authorData.setFirstName(author.getFirstName());
         }
         if (authorData.getLastName() != null && !authorData.getLastName().isEmpty() && !Objects.equals(authorData.getLastName(), author.getLastName())) {
