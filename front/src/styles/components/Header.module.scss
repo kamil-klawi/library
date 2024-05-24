@@ -1,0 +1,55 @@
+@import '../abstracts/all';
+
+.header {
+  @apply w-4/5 mx-auto h-fit relative max-[640px]:w-full;
+
+  .nav {
+    @apply px-8 py-8;
+
+    .nav__inner {
+      @apply flex items-center justify-between;
+
+      .nav__brand {
+        @apply text-lg font-medium tracking-normal max-[640px]:text-xl;
+        color: $color-black;
+        font-family: $font-outfit;
+      }
+
+      .nav__menu {
+        @apply text-lg font-medium tracking-normal max-[640px]:text-xl;
+        color: $color-black;
+        font-family: $font-outfit;
+      }
+    }
+  }
+
+  .overlay {
+    @apply w-1/3 h-[100dvh] fixed top-0 right-0 z-[9999] max-[960px]:w-full max-[1280px]:w-1/2;
+    clip-path: polygon(100% 0%,100% 0%,100% 100%,100% 100%);
+    background-color: $color-purple;
+
+    .hero__overlay {
+      @apply w-full h-full m-0 p-10 max-[640px]:px-6;
+
+      .nav__menu {
+        @apply text-xl font-medium tracking-normal max-[640px]:text-lg;
+        color: $color-white;
+        font-family: $font-outfit;
+      }
+
+      .nav__list {
+        @apply mt-20 flex flex-col;
+
+        .nav__item {
+          @apply flex justify-start items-center my-4;
+
+          .nav__link {
+            @apply font-medium tracking-normal text-7xl max-[480px]:text-5xl;
+            color: $color-white;
+            font-family: $font-outfit;
+          }
+        }
+      }
+    }
+  }
+}
