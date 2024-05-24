@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "brand": "library",
+    "menu": "menu",
+    "home": "homepage",
+    "about": "about project",
+    "close": "close"
+  },
+  "error": {
+    "title": "ERROR 404",
+    "description": "Looks like the page you are looking for is not available."
+  }
+}

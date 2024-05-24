@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "brand": "biblioteka",
+    "menu": "menu",
+    "home": "strona główna",
+    "about": "o projekcie",
+    "close": "zamknij"
+  },
+  "error": {
+    "title": "BŁĄD 404",
+    "description": "Wygląda na to, że strona, której szukasz, jest niedostępna."
+  }
+}
