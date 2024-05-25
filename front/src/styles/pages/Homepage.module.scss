@@ -1,0 +1,15 @@
+@import '../abstracts/all';
+
+.main {
+  @apply w-4/5 mx-auto h-fit relative max-[640px]:w-full;
+
+  .main__title {
+    @apply  mb-8 text-4xl font-medium tracking-normal max-[640px]:text-lg;
+    color: $color-black;
+    font-family: $font-outfit;
+  }
+
+  .main__cards {
+    @apply flex flex-row items-center gap-4;
+  }
+}

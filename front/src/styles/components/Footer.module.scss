@@ -1,7 +1,7 @@
 @import '../abstracts/all';
 
 .footer {
-  @apply w-4/5 mx-auto h-fit rounded-lg max-[640px]:w-full max-[640px]:rounded-none;
+  @apply w-4/5 mx-auto mb-8 h-fit rounded-lg max-[640px]:w-full max-[640px]:rounded-none;
   background-color: $color-purple;
 
   .footer__wrapper {
@@ -15,16 +15,20 @@
     .wrapper__content {
       @apply flex justify-between max-[480px]:flex-col max-[480px]:items-start;
 
-      .footer__list {
-        @apply list-none max-[480px]:mt-12;
+      .wrapper__list {
+        @apply flex justify-between max-[480px]:flex-col max-[480px]:items-start;
 
-        .wrapper__item {
-          @apply mb-2;
-        }
+        .footer__list {
+          @apply list-none max-[480px]:mt-12 ml-12 max-[480px]:ml-0;
+
+          .wrapper__item {
+            @apply mb-2 first-letter:uppercase;
+          }
       }
+    }
 
       .footer__text {
-        @apply font-normal text-base tracking-normal capitalize max-[480px]:text-xl;
+        @apply font-normal text-base tracking-normal max-[480px]:text-xl;
         color: $color-white;
         font-family: $font-outfit;
       }

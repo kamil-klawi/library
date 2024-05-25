@@ -1,0 +1,28 @@
+@import '../abstracts/all';
+
+.card {
+  @apply w-1/3 h-fit my-8 p-8 rounded-xl cursor-pointer;
+  background-color: $color-purple;
+
+  .card__title {
+    @apply font-normal text-2xl tracking-normal max-[480px]:text-xl first-letter:uppercase;
+    color: $color-white;
+    font-family: $font-outfit;
+  }
+
+  .card__content {
+    @apply flex flex-col mt-4;
+
+    .card__text {
+      @apply font-normal text-base tracking-normal max-[480px]:text-xl first-letter:uppercase;
+      color: $color-white;
+      font-family: $font-outfit;
+    }
+
+    .card__image {
+      @apply mt-4 w-1/2 mx-auto font-normal text-base tracking-normal max-[480px]:text-xl;
+      color: $color-white;
+      font-family: $font-outfit;
+    }
+  }
+}
