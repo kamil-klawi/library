@@ -1,19 +1,40 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import styles from '../styles/components/Header.module.scss';
+import dayjs from 'dayjs';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { changeLanguage } from 'i18next';
+import { Select } from 'antd';
+import { MenuList } from './MenuList.tsx';
+import styles from '../styles/components/Header.module.scss';
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
     const header = useRef(null);
     const tl = useRef<any>();
     const { t } = useTranslation();
+    const today = dayjs();
 
     const handleMenuButton = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    const handleLanguage = (language: string) => {
+        changeLanguage(language);
+        localStorage.setItem('lang', language);
+    };
+
+    const links = [
+        {
+            name: t('navigation.home'),
+            uri: '',
+        },
+        {
+            name: t('navigation.about'),
+            uri: 'about_project',
+        },
+    ];
 
     gsap.registerPlugin(useGSAP());
     useGSAP(
@@ -58,7 +79,7 @@ export const Header = () => {
             <nav className={styles.nav}>
                 <div className={styles.nav__inner}>
                     <Link to="/" className={styles.nav__brand}>
-                        {t('navigation.brand')}
+                        Nasza biblioteka
                     </Link>
                     <button
                         role="button"
@@ -71,25 +92,33 @@ export const Header = () => {
             </nav>
             <div className={`${styles.overlay} menu__overlay`}>
                 <div className={styles.hero__overlay}>
-                    <button
-                        role="button"
-                        className={styles.nav__menu}
-                        onClick={handleMenuButton}
-                    >
-                        {t('navigation.close')}
-                    </button>
-                    <ul className={styles.nav__list}>
-                        <li className={`${styles.nav__item} menu__item`}>
-                            <Link to="/" className={styles.nav__link}>
-                                {t('navigation.home')}
-                            </Link>
-                        </li>
-                        <li className={`${styles.nav__item} menu__item`}>
-                            <Link to="/about" className={styles.nav__link}>
-                                {t('navigation.about')}
-                            </Link>
-                        </li>
-                    </ul>
+                    <div className={styles.nav__info}>
+                        <p className={styles.nav__menu}>
+                            {today.format('dddd, DD MMM YYYY')}
+                        </p>
+                        <button
+                            role="button"
+                            className={styles.nav__menu}
+                            onClick={handleMenuButton}
+                        >
+                            {t('navigation.close')}
+                        </button>
+                    </div>
+                    <MenuList
+                        arrayList={links}
+                        classNameItem={`${styles.nav__item} menu__item`}
+                        classNameLink={styles.nav__link}
+                        classNameList={styles.nav__list}
+                    />
+                    <Select
+                        defaultValue="en"
+                        className={styles.nav__languageSelector}
+                        onChange={handleLanguage}
+                        options={[
+                            { value: 'en', label: 'English' },
+                            { value: 'pl', label: 'Polish' },
+                        ]}
+                    />
                 </div>
             </div>
         </header>
