@@ -1,10 +1,12 @@
 {
   "navigation": {
-    "brand": "library",
     "menu": "menu",
     "home": "homepage",
     "about": "about project",
     "close": "close"
+  },
+  "footer": {
+    "description": "This service ensures unforgettable moments with books."
   },
   "error": {
     "title": "ERROR 404",

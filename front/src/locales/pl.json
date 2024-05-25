@@ -1,10 +1,12 @@
 {
   "navigation": {
-    "brand": "biblioteka",
     "menu": "menu",
     "home": "strona główna",
     "about": "o projekcie",
     "close": "zamknij"
+  },
+  "footer": {
+    "description": "Ten serwis zapewnia niezapomniane chwile z ksiązkami."
   },
   "error": {
     "title": "BŁĄD 404",
