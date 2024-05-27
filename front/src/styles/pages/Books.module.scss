@@ -1,0 +1,11 @@
+@import '../abstracts/all';
+
+.main {
+  @apply w-4/5 mx-auto h-fit relative;
+
+  .main__title {
+    @apply  mb-8 text-4xl font-medium tracking-normal max-[640px]:text-2xl;
+    color: $color-black;
+    font-family: $font-outfit;
+  }
+}
