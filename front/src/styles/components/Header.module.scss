@@ -1,7 +1,7 @@
 @import '../abstracts/all';
 
 .header {
-  @apply w-4/5 relative z-[9999] mx-auto h-fit relative max-[640px]:w-full;
+  @apply w-4/5 mx-auto h-fit relative z-[1] max-[640px]:w-full;
 
   .nav {
     @apply px-8 py-8;

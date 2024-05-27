@@ -7,6 +7,7 @@ export interface CardProps {
 }
 
 export interface InfoCardProps {
+    uri: string;
     title: string;
     description: string;
     image: {

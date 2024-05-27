@@ -1,7 +1,7 @@
 @import '../abstracts/all';
 
 .footer {
-  @apply w-4/5 mx-auto mb-8 h-fit rounded-lg max-[640px]:w-full max-[640px]:rounded-none;
+  @apply w-4/5 mx-auto mb-8 h-fit rounded-lg max-[640px]:w-full max-[640px]:rounded-none max-[640px]:mb-0;
   background-color: $color-purple;
 
   .footer__wrapper {

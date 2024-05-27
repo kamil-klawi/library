@@ -1,15 +1,36 @@
 @import '../abstracts/all';
 
 .main {
-  @apply w-4/5 mx-auto h-fit relative max-[640px]:w-full;
+  @apply w-4/5 mx-auto h-fit relative;
 
   .main__title {
-    @apply  mb-8 text-4xl font-medium tracking-normal max-[640px]:text-lg;
+    @apply  mb-8 text-4xl font-medium tracking-normal max-[640px]:text-2xl;
     color: $color-black;
     font-family: $font-outfit;
   }
 
+  .main__description {
+    @apply w-1/2 text-xl font-medium tracking-normal max-[640px]:w-full max-[960px]:w-3/4;
+    color: $color-black;
+    font-family: $font-outfit;
+  }
+
+  .main__githubLink {
+    @apply text-base px-6 py-3 font-medium tracking-normal rounded;
+    color: $color-white;
+    font-family: $font-outfit;
+    background-color: $color-purple;
+  }
+
+  .main__techList {
+    @apply grid grid-cols-2 list-disc;
+
+    .main__techItem {
+      @apply ml-12 py-2;
+    }
+  }
+
   .main__cards {
-    @apply flex flex-row items-center gap-4;
+    @apply grid grid-cols-3 max-[1024px]:grid-cols-2 max-[640px]:grid-cols-1 gap-4;
   }
 }

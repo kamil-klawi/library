@@ -1,4 +1,5 @@
 {
+  "loading": "Ładowanie...",
   "navigation": {
     "menu": "menu",
     "home": "strona główna",
@@ -8,8 +9,96 @@
   "footer": {
     "description": "Ten serwis zapewnia niezapomniane chwile z ksiązkami."
   },
+  "table": {
+    "homeTitle": "Tabela",
+    "firstName": "Imię",
+    "lastName": "Nazwisko",
+    "delete": "Usuń",
+    "update": "Aktulizuj",
+    "actions": "Akcje",
+    "books": {
+      "header": "Ksiązki",
+      "btn": "Wyślij",
+      "title": "Tytuł",
+      "createTitle":  "Dodaj ksiązke",
+      "updateTitle":  "Zaktulizuj ksiązke",
+      "publishingHouse": "Wydawnictwo",
+      "languageOriginal": "Język orginału",
+      "numberOfPages": "Ilość stron",
+      "publicationDate": "Data wydania",
+      "type": "Typ",
+      "cover": "Okładka",
+      "height": "Wysokość (mm)",
+      "width": "Szerokość (mm)",
+      "depth": "Głębokość (mm)",
+      "placeholders": {
+        "title": "np. wspaniała przygoda",
+        "publishingHouse": "np. wydawnictwo marginesy",
+        "languageOriginal": "np. polski, angielski, niemiecki",
+        "numberOfPages": "np. 220, 540, 770",
+        "publicationDate": "RRRR-MM-DD",
+        "type": "np. ksiązka, e-book",
+        "cover": "np. miękka, twarda",
+        "height": "np. 220, 270, 320",
+        "width": "np. 100, 120, 160",
+        "depth": "np. 10, 13, 16"
+      }
+    },
+    "authors": {
+      "header": "Autorzy",
+      "btn": "Wyślij",
+      "title": "Autorzy",
+      "createTitle": "Dodaj autora",
+      "updateTitle": "Zaktulizuj autora",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "placeholders": {
+        "firstName": "np. Jakub",
+        "lastName": "np. Kowalski"
+      }
+    },
+    "translators": {
+      "header": "Tłumacze",
+      "btn": "Wyślij",
+      "title": "Tłumacze",
+      "createTitle": "Dodaj tłumacza",
+      "updateTitle": "Zaktulizuj tłumacza",
+      "firstName": "Imię",
+      "lastName": "Nazwisko",
+      "languageRelease": "Język wydania",
+      "placeholders": {
+        "firstName": "np. Jakub",
+        "lastName": "np. Kowalski",
+        "languageRelease": "np. poslki"
+      }
+    }
+  },
+  "cards": {
+    "books": {
+      "uri": "books",
+      "title": "Ksiązki",
+      "description": "dodaj, edytuj, usuń ksiązki"
+    },
+    "authors": {
+      "uri": "authors",
+      "title": "Autorzy",
+      "description": "dodaj, edytuj, usuń autorów"
+    },
+    "translators": {
+      "uri": "translators",
+      "title": "Tłumacze",
+      "description": "dodaj, edytuj, usuń tłumaczy"
+    }
+  },
   "error": {
     "title": "BŁĄD 404",
-    "description": "Wygląda na to, że strona, której szukasz, jest niedostępna."
+    "description": "Wygląda na to, że strona, której szukasz, jest niedostępna.",
+    "message": "Wystąpił błąd:"
+  },
+  "about": {
+    "title": "Nasza Biblioteka - Projekt szkolny",
+    "description": "Nasza Biblioteka to mój pierwszy projekt full-stack, który stworzyłem samodzielnie. Projekt szkolny, który zrobiłem, dotyczący zarządzania biblioteką. Jest to serwis internetowy, który umożliwia łatwe dodawanie, edytowanie i usuwanie książek, autorów i tłumaczy. Użyłem spring boot z React jako stosu technologicznego.",
+    "repository": "Repozytorium Github",
+    "technologies": "Zastosowane technologie"
   }
 }

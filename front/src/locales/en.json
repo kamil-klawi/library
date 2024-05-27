@@ -1,4 +1,5 @@
 {
+  "loading": "Loading...",
   "navigation": {
     "menu": "menu",
     "home": "homepage",
@@ -8,8 +9,96 @@
   "footer": {
     "description": "This service ensures unforgettable moments with books."
   },
+  "table": {
+    "homeTitle": "Table",
+    "firstName": "FirstName",
+    "lastName": "LastName",
+    "delete": "Delete",
+    "update": "Update",
+    "actions": "Actions",
+    "books": {
+      "header": "Books",
+      "btn": "Send",
+      "title": "Title",
+      "createTitle":  "Add book",
+      "updateTitle":  "Update book",
+      "publishingHouse": "Publishing house",
+      "languageOriginal": "Language original",
+      "numberOfPages": "Number of pages",
+      "publicationDate": "Publication date",
+      "type": "Type",
+      "cover": "Cover",
+      "height": "Height (mm)",
+      "width": "Width (mm)",
+      "depth": "Depth (mm)",
+      "placeholders": {
+        "title": "np. great adventure",
+        "publishingHouse": "np. wydawnictwo marginesy",
+        "languageOriginal": "np. polish, english, germany",
+        "numberOfPages": "np. 220, 540, 770",
+        "publicationDate": "YYYY-MM-DD",
+        "type": "np. book, e-book",
+        "cover": "np. soft, hard",
+        "height": "np. 220, 270, 320",
+        "width": "np. 100, 120, 160",
+        "depth": "np. 10, 13, 16"
+      }
+    },
+    "authors": {
+      "header": "Authors",
+      "btn": "Send",
+      "title": "Authors",
+      "createTitle": "Add Author",
+      "updateTitle": "Update Author",
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "placeholders": {
+        "firstName": "np. John",
+        "lastName": "np. Doe"
+      }
+    },
+    "translators": {
+      "header": "Translators",
+      "btn": "Send",
+      "title": "Translators",
+      "createTitle": "Add Translator",
+      "updateTitle": "Update Translator",
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "languageRelease": "Language release",
+      "placeholders": {
+        "firstName": "np. John",
+        "lastName": "np. Doe",
+        "languageRelease": "np. polish"
+      }
+    }
+  },
+  "cards": {
+    "books": {
+      "uri": "books",
+      "title": "books",
+      "description": "add, edit, remove books"
+    },
+    "authors": {
+      "uri": "authors",
+      "title": "authors",
+      "description": "add, edit, remove authors"
+    },
+    "translators": {
+      "uri": "translators",
+      "title": "translators",
+      "description": "add, edit, remove translators"
+    }
+  },
   "error": {
     "title": "ERROR 404",
-    "description": "Looks like the page you are looking for is not available."
+    "description": "Looks like the page you are looking for is not available.",
+    "message": "An error has occurred:"
+  },
+  "about": {
+    "title": "Nasza Biblioteka - School project",
+    "description": "Nasza Biblioteka is my first fullstack project that I created on my own. School project I did on library management. This is web service that allows you to easily add, edit and remove books, authors and translators. I used spring boot with React as the stack technologies.",
+    "repository": "Github repository",
+    "technologies": "Technologies used"
   }
 }

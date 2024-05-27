@@ -27,34 +27,42 @@ function App() {
         <>
             <Header />
             <main className={styles.main}>
-                <h2 className={styles.main__title}>{t('table')}</h2>
-                <Table dataSource={data} pagination={{ pageSize: 5 }}>
+                <h2 className={styles.main__title}>{t('table.homeTitle')}</h2>
+                <Table
+                    dataSource={data}
+                    pagination={{ pageSize: 5 }}
+                    bordered
+                    scroll={{ x: '100%' }}
+                >
                     <Table.Column title="Id" dataIndex="id" key="id" />
                     <Table.Column
-                        title="FirstName"
+                        title={t('table.firstName')}
                         dataIndex="firstName"
                         key="firstName"
                     />
                     <Table.Column
-                        title="LastName"
+                        title={t('table.lastName')}
                         dataIndex="lastName"
                         key="lastName"
                     />
                 </Table>
                 <div className={styles.main__cards}>
                     <Card
-                        title="books"
-                        description="add, edit, remove books"
+                        uri={t('cards.books.uri')}
+                        title={t('cards.books.title')}
+                        description={t('cards.books.description')}
                         image={{ uri: BooksImage, alt: 'booksPhoto' }}
                     />
                     <Card
-                        title="authors"
-                        description="add, edit, remove authors"
+                        uri={t('cards.authors.uri')}
+                        title={t('cards.authors.title')}
+                        description={t('cards.authors.description')}
                         image={{ uri: AuthorsImage, alt: 'authorsPhoto' }}
                     />
                     <Card
-                        title="translators"
-                        description="add, edit, remove translators"
+                        uri={t('cards.translators.uri')}
+                        title={t('cards.translators.title')}
+                        description={t('cards.translators.description')}
                         image={{
                             uri: TranslatorsImage,
                             alt: 'translatorsPhoto',
